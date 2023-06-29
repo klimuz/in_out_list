@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pickup_array">
+        <item>mic</item>
+        <item>condencer</item>
+        <item>D.I. box</item>
+    </string-array>
+    <string-array name="quantity_array">
+        <item>X0</item>
+        <item>X1</item>
+        <item>X2</item>
+        <item>X3</item>
+        <item>X4</item>
+        <item>X5</item>
+        <item>X6</item>
+        <item>X7</item>
+        <item>X8</item>
+        <item>X9</item>
+        <item>X10</item>
+    </string-array>
+</resources>

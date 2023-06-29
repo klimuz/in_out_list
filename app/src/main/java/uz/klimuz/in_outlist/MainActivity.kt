@@ -7,11 +7,17 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import uz.klimuz.in_outlist.groups.DrumsActivity
+import uz.klimuz.in_outlist.utils.Instrument
 
 class MainActivity : AppCompatActivity() {
     val band_groups_list = arrayOf("DRUMKIT", "PERCUSSION", "GUITARS", "SYNTHS", "NATIONAL",
         "VOCALS", "STRINGS", "WOODWINDS", "BRASS", "PLAYBACK")
     var adapter: ArrayAdapter<String>? = null
+
+    companion object{
+        var drumsActivityLaunchCounter: Int = 0
+        val drumsSelected: ArrayList<Instrument> = ArrayList()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         listView.adapter = adapter
 
         listView.onItemClickListener = AdapterView.OnItemClickListener{_, _, position, _ ->
+            drumsActivityLaunchCounter ++
             val intent = Intent(this, DrumsActivity::class.java)
             startActivity(intent)
         }

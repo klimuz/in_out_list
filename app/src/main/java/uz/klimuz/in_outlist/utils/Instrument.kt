@@ -10,8 +10,9 @@ import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import uz.klimuz.in_outlist.R
 
-data class Instrument (
-    var name: String, var possibleQuantity: Int, var selectedQuantity: Int = 0,
-    var stereo: Boolean = false, var  pickup: String = "mic"){
+class Instrument (
+    var name: String, var possibleQuantity: Int, var selectedQuantity: Int,
+    var stereo: Boolean = false, var  pickup: String = "mic")
 
-}
+
+
