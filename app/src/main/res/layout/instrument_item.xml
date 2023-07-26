@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:weightSum="100">
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="40"
+        android:textSize="15sp"
+        android:background="@drawable/view_style"/>
+
+    <Spinner
+        android:id="@+id/pickupSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:entries="@array/pickupItemList"
+        android:background="@drawable/view_style"/>
+
+    <Spinner
+        android:id="@+id/stereoSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:entries="@array/stereoItemList"
+        android:background="@drawable/view_style"/>
+
+    <Spinner
+        android:id="@+id/quantitySpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="15"
+        android:entries="@array/quantityItemList"
+        android:background="@drawable/view_style"/>
+</LinearLayout>

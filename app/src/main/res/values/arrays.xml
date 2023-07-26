@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bandGroupsList">
+        <item>DRUMKIT</item>
+        <item>PERCUSSION</item>
+        <item>GUITARS</item>
+        <item>KEYBOARDS</item>
+        <item>NATIONAL</item>
+        <item>SOLOISTS</item>
+        <item>BACKS</item>
+        <item>STRINGS</item>
+        <item>WOODWINDS</item>
+        <item>BRASS</item>
+        <item>PLAYBACK</item>
+    </string-array>
+
+    <string-array name="pickupItemList">
+        <item>mic</item>
+        <item>condenser</item>
+        <item>D.I. box</item>
+        <item>wireless</item>
+        <item>DPA</item>
+        <item>HeadSet</item>
+    </string-array>
+
+    <string-array name="quantityItemList">
+        <item>X0</item>
+        <item>X1</item>
+        <item>X2</item>
+        <item>X3</item>
+        <item>X4</item>
+        <item>X5</item>
+        <item>X6</item>
+        <item>X7</item>
+        <item>X8</item>
+        <item>X9</item>
+        <item>X10</item>
+    </string-array>
+
+    <string-array name="stereoItemList">
+        <item>mono</item>
+        <item>stereo</item>
+    </string-array>
+</resources>

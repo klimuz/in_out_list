@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">In-Out List</string>
+    <string name="upperText">desk:</string>
+    <string name="console_type_generic">GENERIC</string>
+    <string name="console_type_pm5d">PM5D</string>
+    <string name="console_type_x32">X32</string>
+    <string name="button_next">NEXT</string>
+    <string name="saveButtonText">SAVE</string>
+</resources>

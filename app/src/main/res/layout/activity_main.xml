@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/upperTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:text="@string/upperText"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <RadioGroup
+            android:id="@+id/consoles_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="120">
+
+            <RadioButton
+                android:id="@+id/generic_desk_radiobutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:background="@drawable/view_style"
+                android:checked="true"
+                android:text="@string/console_type_generic" />
+
+            <RadioButton
+                android:id="@+id/yamaha_pm5d_radiobutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:background="@drawable/view_style"
+                android:text="@string/console_type_pm5d" />
+
+            <RadioButton
+                android:id="@+id/x32_radiobutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:background="@drawable/view_style"
+                android:text="@string/console_type_x32" />
+
+        </RadioGroup>
+
+        <ListView
+            android:id="@+id/band_groups_listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="90"
+            android:background="@android:color/background_light"
+            android:entries="@array/bandGroupsList" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next_step_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="5"
+        android:text="@string/button_next" />
+
+</LinearLayout>
