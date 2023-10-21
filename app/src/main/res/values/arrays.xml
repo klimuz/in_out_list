@@ -12,6 +12,7 @@
         <item>WOODWINDS</item>
         <item>BRASS</item>
         <item>PLAYBACK</item>
+        <item>EXTRA</item>
     </string-array>
 
     <string-array name="pickupItemList">

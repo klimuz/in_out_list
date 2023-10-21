@@ -1,73 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/upperTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#4CAF50"
-        android:text="@string/upperText"
-        android:textSize="20sp" />
-
     <LinearLayout
+        android:id="@+id/upperTextRow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
+        android:background="#4CAF50"
+        app:layout_constraintBottom_toTopOf="@+id/consolesRadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:weightSum="100">
-
-        <RadioGroup
-            android:id="@+id/consoles_radio_group"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="5"
-            android:orientation="horizontal"
-            android:weightSum="120">
-
-            <RadioButton
-                android:id="@+id/generic_desk_radiobutton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="40"
-                android:background="@drawable/view_style"
-                android:checked="true"
-                android:text="@string/console_type_generic" />
-
-            <RadioButton
-                android:id="@+id/yamaha_pm5d_radiobutton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="40"
-                android:background="@drawable/view_style"
-                android:text="@string/console_type_pm5d" />
-
-            <RadioButton
-                android:id="@+id/x32_radiobutton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="40"
-                android:background="@drawable/view_style"
-                android:text="@string/console_type_x32" />
-
-        </RadioGroup>
-
-        <ListView
-            android:id="@+id/band_groups_listView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="90"
-            android:background="@android:color/background_light"
-            android:entries="@array/bandGroupsList" />
+    <TextView
+        android:id="@+id/deskTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deskUpperText"
+        android:textSize="20sp"
+        android:layout_weight="50"/>
+    <TextView
+        android:id="@+id/channelsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/channelsUpperText"
+        android:textSize="20sp"
+        android:layout_weight="50"/>
     </LinearLayout>
+    <RadioGroup
+        android:id="@+id/consolesRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="120"
+        app:layout_constraintBottom_toTopOf="@+id/bandGroupsListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upperTextRow"
+        tools:ignore="UsingOnClickInXml">
+
+        <RadioButton
+            android:id="@+id/genericDeskRadiobutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:onClick="onRadioButtonClicked"
+            android:background="@drawable/view_style"
+            android:text="@string/console_type_generic" />
+
+        <RadioButton
+            android:id="@+id/yamahaPm5dRadiobutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:onClick="onRadioButtonClicked"
+            android:background="@drawable/view_style"
+            android:text="@string/console_type_pm5d" />
+
+        <RadioButton
+            android:id="@+id/x32Radiobutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:onClick="onRadioButtonClicked"
+            android:background="@drawable/view_style"
+            android:text="@string/console_type_x32" />
+
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/bandGroupsListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/nextStepButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consolesRadioGroup"
+        android:entries="@array/bandGroupsList"/>
 
     <Button
-        android:id="@+id/next_step_button"
+        android:id="@+id/nextStepButton"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="5"
-        android:text="@string/button_next" />
+        android:layout_height="wrap_content"
+        android:onClick="nextStep"
+        android:text="@string/button_next"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bandGroupsListView"
+        tools:ignore="UsingOnClickInXml" />
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

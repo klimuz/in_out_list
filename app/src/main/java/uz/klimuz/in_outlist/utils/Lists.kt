@@ -1,17 +1,17 @@
 package uz.klimuz.in_outlist.utils
 
 val drumInstrumentsList: ArrayList<Instrument> = arrayListOf(
-    Instrument("SNARE 2", 1),
-    Instrument("OVER",2, "condenser"),
-    Instrument("FLOOR TOMS",2),
-    Instrument("TOMS",3),
-    Instrument("HAT",1, "condenser"),
-    Instrument("SNARE BOT",1),
-    Instrument("SNARE TOP",1),
-    Instrument("SNARE",0),
-    Instrument("KICK OUT",1),
-    Instrument("KICK IN", 1, pickup = "condenser"),
     Instrument("KICK",0),
+    Instrument("KICK IN", 1, pickup = "condenser"),
+    Instrument("KICK OUT",1),
+    Instrument("SNARE",0),
+    Instrument("SNARE TOP",1),
+    Instrument("SNARE BOT",1),
+    Instrument("HAT",1, "condenser"),
+    Instrument("TOMS",3),
+    Instrument("FLOOR TOMS",2),
+    Instrument("OVER",2, "condenser"),
+    Instrument("SNARE 2", 0),
 
     Instrument("SPD mono",0, "D.I. box"),
     Instrument("SPD stereo",0, "D.I. box",true)
@@ -44,33 +44,29 @@ val keyboardInstrumentsList: ArrayList<Instrument> = arrayListOf(
     Instrument("PIANO LO",0,"condenser")
     )
 val nationalInstrumentsList: ArrayList<Instrument> = arrayListOf(
-    Instrument("VIOLA",1,"D.I. box"),
+    Instrument("VIOLA",0,"D.I. box"),
     Instrument("GIJAK",0),
-    Instrument("KONUN",1,"D.I. box"),
+    Instrument("KONUN",0,"D.I. box"),
     Instrument("RUBOB",0,"DPA"),
-    Instrument("TOR",1,"DPA"),
+    Instrument("TOR",0,"DPA"),
     Instrument("DUTOR",0,"DPA"),
     Instrument("TAMBUR",0,"DPA"),
     Instrument("SOZ",1,"D.I. box"),
     Instrument("CHANG",0),
-    Instrument("NAY",1),
-    Instrument("KLARNET",1),
+    Instrument("NAY",0),
+    Instrument("KLARNET",0),
     Instrument("SURNAY",0),
     Instrument("KUSHNAY",0),
-    Instrument("HARMONICA",1),
+    Instrument("HARMONICA",0),
     Instrument("HARMONICA HI",0),
     Instrument("HARMONICA LO",0)
     )
 val soloistInstrumentsList: ArrayList<Instrument> = arrayListOf(
-    Instrument("MAIN VOCAL",2,"wireless"),
-    Instrument("MC MAN",1),
-    Instrument("MC WOMAN",1),
-    Instrument("HEADSET",1,"HeadSet"),
     Instrument("AUTO-TUNER RTN",0,"D.I. box", true),
-    Instrument("ROOM",0,"condenser"),
-    Instrument("PRODUCER",1),
-    Instrument("TRIBUNE",0,"condenser"),
-    Instrument("CONDUCTOR",0,"HeadSet")
+    Instrument("HEADSET",0,"HeadSet"),
+    Instrument("MC WOMAN",0),
+    Instrument("MC MAN",2),
+    Instrument("MAIN VOCAL",2,"wireless")
     )
 val backVocalInstrumentsList: ArrayList<Instrument> = arrayListOf(
     Instrument("CHOIR",0,"condenser"),
@@ -79,8 +75,8 @@ val backVocalInstrumentsList: ArrayList<Instrument> = arrayListOf(
     Instrument("CHOIR BOYS",0,"condenser"),
     Instrument("CHOIR GIRLS",0,"condenser"),
     Instrument("BACK VOCAL",0),
-    Instrument("BACK MEN",0),
-    Instrument("BACK WOMEN",0)
+    Instrument("BACK MEN",2),
+    Instrument("BACK WOMEN",2)
     )
 val stringInstrumentsList: ArrayList<Instrument> = arrayListOf(
     Instrument("1-VIOLINES",0,"DPA"),
@@ -105,9 +101,15 @@ val brassInstrumentsList: ArrayList<Instrument> = arrayListOf(
     Instrument("B-SAXOPHONE",0)
     )
 val playbackInstrumentsList: ArrayList<Instrument> = arrayListOf(
-    Instrument("COMPUTER",0,"D.I. box", true),
+    Instrument("COMPUTER",1,"D.I. box", true),
     Instrument("VIDEO",0,"D.I. box", true),
     Instrument("SEQUENCER",0,"D.I. box", true),
     Instrument("D.J.",0,"D.I. box", true),
     Instrument("MEDIA",0,"D.I. box", true)
     )
+val  extraMicsList: ArrayList<Instrument> = arrayListOf(
+    Instrument("ROOM",2,"condenser"),
+    Instrument("PRODUCER",0),
+    Instrument("TRIBUNE",0,"condenser"),
+    Instrument("CONDUCTOR",0,"HeadSet")
+)

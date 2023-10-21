@@ -58,6 +58,10 @@ class GroupActivity: AppCompatActivity() {
                 currentInstrumentList.clear()
                 currentInstrumentList.addAll(playbackInstrumentsList)
             }
+            11 ->{
+                currentInstrumentList.clear()
+                currentInstrumentList.addAll(extraMicsList)
+            }
             else -> {
                 currentInstrumentList.clear()
                 currentInstrumentList.addAll(drumInstrumentsList)
